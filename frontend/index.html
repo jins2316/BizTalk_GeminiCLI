@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizTone Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>BizTone Converter</h1>
+    <div class="container">
+        <div class="input-section">
+            <textarea id="inputText" placeholder="변환할 내용을 입력하세요."></textarea>
+            <div class="controls">
+                <select id="targetAudience">
+                    <option value="상사">상사</option>
+                    <option value="타팀 동료">타팀 동료</option>
+                    <option value="고객">고객</option>
+                </select>
+                <button id="convertButton">변환하기</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <textarea id="outputText" readonly placeholder="변환된 결과가 여기에 표시됩니다."></textarea>
+            <button id="copyButton">복사하기</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

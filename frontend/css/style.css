@@ -1,0 +1,114 @@
+body {
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F5F7FA; /* Secondary Color */
+    color: #333333; /* Text Color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.input-section, .output-section {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    background-color: #FFFFFF;
+    border: 1px solid #E0E6ED; /* Border Color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E0E6ED;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4A90E2; /* Primary Color on focus */
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Push controls to the bottom */
+}
+
+select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #E0E6ED;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C118.8L146.2%2C259.6L5.4%2C118.8z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4A90E2; /* Primary Color */
+    color: #FFFFFF; /* White Text Color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD; /* Darker shade for hover */
+}
+
+#copyButton {
+    margin-top: 15px;
+    align-self: flex-end; /* Align copy button to the right within its section */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    select, button {
+        width: 100%;
+    }
+}
